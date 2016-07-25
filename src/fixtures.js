@@ -1,6 +1,7 @@
 'use strict';
 
 const Item = require('./models/item');
+const Promotions = require('./models/promotion');
 
 function loadAllItems() {
     return [
@@ -14,16 +15,8 @@ function loadAllItems() {
 }
 
 function loadPromotions() {
-    return [
-        {
-            type: 'BUY_TWO_GET_ONE_FREE',
-            barcodes: [
-                'ITEM000000',
-                'ITEM000001',
-                'ITEM000005'
-            ]
-        }
-    ];
+
+    return [new Promotions('BUY_TWO_GET_ONE_FREE', ['ITEM000000', 'ITEM000001', 'ITEM000005'])];
 }
 
 exports.loadAllItems = loadAllItems;
