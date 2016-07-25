@@ -1,6 +1,5 @@
 'use strict';
 const fixture = require('./fixtures');
-const loadPromotions = fixture.loadPromotions;
 const CartItem = require('./models/cart-item');
 const ReceiptItem = require('./models/receipt-item');
 const Receipt = require('./models/receipt');
